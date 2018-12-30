@@ -26,6 +26,8 @@
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
 [image4]: ./configuration.png
+[image5]: ./result.png
+[image6]: ./perspective_transform.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -62,7 +64,7 @@ The rock color mainly stays in the red, green levels and stays less in blue. So 
 Modified Jupyter Notebook to accomodate the required changes.  All details are shown in the jupyter notebook 'Rover_Project_Test_Notebook.ipynb'. Test Video Included .
 
 
-![Image of Video][image2]
+![Image of Video][image5]
 ### Autonomous Navigation and Mapping
 
 #### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
@@ -74,6 +76,7 @@ def perspect_transform(img, src, dst):
     return warped,mask
 ```
 Used Perspective Transform along with a mask to detect part of the image which is in the visible region of the camera and added the function to find the rocks. Since obstacle map is used along with the mask being applied, I was able to improve the mapping. Each of the steps are carried out as in the commented in the code. If any rock was found it is marked in the map.
+![Image of Video][image6]
 ```python
 def perception_step(Rover):
     # Perform perception steps to update Rover()
