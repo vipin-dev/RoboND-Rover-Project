@@ -28,6 +28,7 @@
 [image4]: ./configuration.png
 [image5]: ./result.png
 [image6]: ./perspective_transform.png
+[image7]: ./rock_sample.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -58,7 +59,7 @@ def find_rocks(img, levels=[110,110,50]):
     return color_select`
 ```
 The rock color mainly stays in the red, green levels and stays less in blue. So modified the color selection function accordingly.	The result is as follows : 
-![Result of rock color selection][image2]
+![Result of rock color selection][image7]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 Modified Jupyter Notebook to accomodate the required changes.  All details are shown in the jupyter notebook 'Rover_Project_Test_Notebook.ipynb'. Test Video Included .
