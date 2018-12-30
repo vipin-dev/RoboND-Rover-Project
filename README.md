@@ -47,7 +47,9 @@ After running the code on test data, I was able to obtain results as in the foll
 
 ![Result of rock color selection][image2]
 ![Result of rock color selection][image2]
+
 For detecting rock samples a seperate function is written as follows.
+
 ```python
 def find_rocks(img, levels=[110,110,50]):
     rockpix = ((img[:,:,0] > levels[0]) \
